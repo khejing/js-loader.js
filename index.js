@@ -7,10 +7,10 @@ function loadJSOfOtherDomain(url){
   });
 }
 
-function loadJSOfThisDomain(moduleName){
+function loadJSOfThisDomain(moduleNames){
   return new Promise(function(resolve){
-    require.ensure([moduleName], function(){
-      resolve(require(moduleName));
+    require.ensure([], function(){
+      resolve();
     });
   });
 }
